@@ -2,6 +2,8 @@ import React from "react"
 import { Text, StyleSheet, View, Button, Image, TouchableOpacity, Animated, Dimensions } from "react-native"
 import { ScrollView } from "react-native-gesture-handler"
 
+import Ripple from 'react-native-material-ripple';
+
 
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
 const HomeScreen = (props) => {
@@ -29,7 +31,7 @@ const HomeScreen = (props) => {
 
         </TouchableOpacity>
 
-        <Animated.View>
+            <Ripple>
             <TouchableOpacity
                 style={styles.buttontextStyle}
                 onPress={
@@ -42,7 +44,7 @@ const HomeScreen = (props) => {
                     Semester Wise Course List
                 </Text>
             </TouchableOpacity >
-        </Animated.View>
+            </Ripple>
         <Animated.View>
             <TouchableOpacity
                 style={styles.buttontextStyle}
@@ -87,7 +89,6 @@ const styles = StyleSheet.create(
         {
             height: 45,
             width: 350,
-            borderRadius: 50,
             backgroundColor: "#339933",
             alignSelf: "center",
             marginLeft: 50,
